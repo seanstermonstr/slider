@@ -1,4 +1,5 @@
 #include "puzzle.h"
+using namespace std;
 
 puzzle::puzzle(){
 
