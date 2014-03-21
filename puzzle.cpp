@@ -138,7 +138,7 @@ bool puzzle::playGame(){
     }
 }
 
-//The code that handels moving the zero up
+//The code that handles moving the zero up
 void puzzle::up(){
     
     int temp;
@@ -155,7 +155,7 @@ void puzzle::up(){
     }
 }
 
-//The code that handels moving the zero down
+//The code that handles moving the zero down
 void puzzle::down(){
     
     int temp;
@@ -189,7 +189,7 @@ void puzzle::left(){
     }
 }
 
-//The code that handels moving the zero to the right
+//The code that handles moving the zero to the right
 void puzzle::right(){
     
     int temp;
@@ -219,7 +219,7 @@ bool puzzle::isSolved(){
     return true;
 }
 
-//randomizes the vector of vectors to the square ofGRID_SIZE
+//randomizes the vector of vectors to the square of GRID_SIZE
 void puzzle::initGrid(){
     
     //inits num as square of GRID_SIZE
@@ -228,14 +228,14 @@ void puzzle::initGrid(){
     vector<int> temp, temp1;    //temp vectors for storing randomized list
     int val;    // a temp int value.
 
-    // resizes temp to size and saves intigers 0-9
+    // resizes temp to size and saves integers 0-9
     temp.resize(num);
     for (int i = 0; i < temp.size(); i++)
         temp[i] = i;
 
     // pushes back a random sequence of numbers on to 
     // the second vector from the first vector
-    // shrinks the first vector each itteration.
+    // shrinks the first vector each iteration.
     while (temp.size() != 0){
         val = rand() % temp.size();
         temp1.push_back(temp[val]);
@@ -252,7 +252,7 @@ void puzzle::initGrid(){
     setCoords();
 }
 
-//generates a soluble soluton by calling a random
+//generates a solvable soluton by calling a random
 //movement function
 void puzzle::initSoluble(){
    
@@ -299,7 +299,6 @@ void puzzle::help(){
     cout<<endl<<endl;
     cout<<"After entering a game, use keys WASD to move the '0' around the grid.\n One should attempt to reorder the numbers in sequential order, ending in 0.\n While playing, the user may enter the input 'q' to exit back to the main menu, and 'q' again to exit the game entirely.\n";
     cout<<endl<<endl;
-    cout<<"When choosing a game in the main menu, one has the option of choosing a game that is randomly generated in one of two ways. The main difference is that one game has the possibility of generating an impossible puzzle, though the randomization is better. The other will always generate a soluble version, though often times the puzzles generated seem more trivial.  The choices are clearly labled in the main menu.\n";
+    cout<<"When choosing a game in the main menu, one has the option of choosing a game that is randomly generated in one of two ways. The main difference is that one game has the possibility of generating an impossible puzzle, though the randomization is better. The other will always generate a solvable version, though often times the puzzles generated seem more trivial.  The choices are clearly labeled in the main menu.\n";
     cout<<endl<<endl;
 }
-
