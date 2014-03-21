@@ -6,16 +6,16 @@ int main(){
     char input;
     puzzle game;
 
-    cout<<"Move the '0' around to arange the numbers from 1-n!\n";
+    cout<<"Move the '0' around to arrange the numbers from 1-n!\n";
     cout<<"The '0' goes in the last place in the grid.\n";
 
     while(true){
        
         cout<<"Menu\n";
-        cout<<"OPTION A: Play 3x3 game (may produce insoluble puzzle)\n";
-        cout<<"OPTION B: Play nxn game (may produce insoluble puzzle)\n";
-        cout<<"OPTION C: Play 3x3 game (soluble)\n";
-        cout<<"OPTION D: Play nxn game (soluble)\n";
+        cout<<"OPTION A: Play 3x3 game (may produce impossible puzzle)\n";
+        cout<<"OPTION B: Play nxn game (may produce impossible puzzle)\n";
+        cout<<"OPTION C: Play 3x3 game (A solution exists)\n";
+        cout<<"OPTION D: Play nxn game (a solution exists)\n";
         cout<<"OPTION H: Help playing. May be pressed at any time.\n";
         cout<<"OPTION Q: Quit the game.\n";
         cin>> input;
@@ -27,7 +27,7 @@ int main(){
             game.initGrid();
 
             if (game.playGame())
-                cout<<"Congratz!\n";
+                cout<<"Congrats, you won!\n";
             else cout<<"Sorry, you lose.\n";
 
             break;
@@ -38,7 +38,7 @@ int main(){
             game.reInit(input);
 
             if (game.playGame())
-                cout<<"Congratz!\n";
+                cout<<"Congrats, you won!\n";
             else cout<<"Sorry, you lose.\n";
 
             break;
@@ -49,7 +49,7 @@ int main(){
             game.initSoluble();
 
             if (game.playGame())
-                cout<<"Congratz!\n";
+                cout<<"Congrats, you won!\n";
             else cout<<"Sorry, you lose.\n";
 
             break;
@@ -59,7 +59,7 @@ int main(){
             game.reInit(input); 
             
             if (game.playGame())
-                cout<<"Congratz!\n";
+                cout<<"Congrats, you won!\n";
             else cout<<"Sorry, you lose.\n";
 
             break;
