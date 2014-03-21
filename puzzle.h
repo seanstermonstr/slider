@@ -3,8 +3,6 @@
 #include <cstdlib>
 #include <ctime>
 
-using namespace std;
-
 class puzzle {
 public:
     puzzle();
@@ -25,8 +23,8 @@ private:
     void right();               //moves the 0 slot right one
     void setCoords();           //sets the iCoord and jCoord values
 
-    vector< vector<int> > grid;             //grid for the game
-    vector< vector<int> > SOLUTION_VECTOR;  //contains the solution
+    std::vector< vector<int> > grid;             //grid for the game
+    std::vector< vector<int> > SOLUTION_VECTOR;  //contains the solution
     int GRID_SIZE;                          //size of the grid
     int iCoord, jCoord;                     //store where 0 is on the grid
     const static int defaultSize = 3;       //default used by constructor etc
